@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@casl/ability": "^6.7.3",
+    "@casl/vue": "^2.2.2",
     "core-js": "^3.8.3",
     "dotenv": "^16.4.7",
     "firebase": "^11.4.0",

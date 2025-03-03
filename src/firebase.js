@@ -4,13 +4,12 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth"; // Importa 
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBf1hVijFG0D5J6NThPNPfybVt9FUvxnzY",
-  authDomain: "sistema-condominio-f5edd.firebaseapp.com",
-  projectId: "sistema-condominio-f5edd",
-  storageBucket: "sistema-condominio-f5edd.firebasestorage.app",
-  messagingSenderId: "361828590651",
-  appId: "1:361828590651:web:8f952f926890b5fceba81e",
-  measurementId: "G-8HY68FV62E"
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_FIREBASE_APP_ID,
 };
 
 // Inicializa o Firebase

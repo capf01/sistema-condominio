@@ -1,6 +1,6 @@
 <template>
-  <div class="login-funcionario">
-    <h2>Login de Funcionário</h2>
+  <div class="login-morador">
+    <h2>Login de Morador</h2>
     <input v-model="email" placeholder="Email" type="email" />
     <input v-model="password" placeholder="Senha" type="password" />
     <button @click="login">Entrar</button>
@@ -33,10 +33,10 @@ export default {
         if (userDoc.exists()) {
           const userData = userDoc.data();
 
-          // Verifica se o usuário é um funcionário
-          if (userData.role === 'funcionario') {
-            alert('Login de funcionário realizado com sucesso!');
-            this.$router.push('/dashboard-funcionario');
+          // Verifica se o usuário é um morador
+          if (userData.role === 'morador') {
+            alert('Login de morador realizado com sucesso!');
+            this.$router.push('/dashboard-morador');
           } else {
             alert('Você não tem permissão para acessar esta área.');
             authInstance.signOut(); // Desloga o usuário
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style scoped>
-.login-funcionario {
+.login-morador {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +71,7 @@ input {
 
 button {
   padding: 10px 20px;
-  background-color: #42b983;
+  background-color: #ff7f50; /* Cor diferente para diferenciar de funcionários */
   color: white;
   border: none;
   border-radius: 5px;
@@ -79,7 +79,7 @@ button {
 }
 
 button:hover {
-  background-color: #369f6e;
+  background-color: #cc6640;
 }
 
 p {
